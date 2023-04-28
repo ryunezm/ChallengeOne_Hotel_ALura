@@ -1,15 +1,11 @@
 package com.ryunezm.apps.hotelalura.model;
 
-public class PaymentMethod {
-    private final String name;
-    private final String symbol;
+import lombok.Getter;
 
-    public PaymentMethod(String name, String symbol) {
-        this.name = name;
-        this.symbol = symbol;
-    }
+@Getter
+public record PaymentMethod(String name, String symbol, Double charge) {
 
-    public PaymentMethod getPaymentMethod(){
-        return new PaymentMethod(name, symbol);
+    public String getLongName() {
+        return name + " (" + symbol + ")";
     }
 }

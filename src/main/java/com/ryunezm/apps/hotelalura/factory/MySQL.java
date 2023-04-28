@@ -20,10 +20,10 @@ public class MySQL {
     public void addGuest(Guest guest) throws SQLException {
         String query = "INSERT INTO guests (guestID, guestName, guestEmail, guestPhone) VALUES (?, ?, ?, ?)";
         PreparedStatement statement = connection.prepareStatement(query);
-        statement.setString(1, guest.getGuestID());
-        statement.setString(2, guest.getGuestName());
-        statement.setString(3, guest.getGuestEmail());
-        statement.setString(4, guest.getGuestPhone());
+        statement.setString(1, guest.getId());
+        statement.setString(2, guest.getName());
+        statement.setString(3, guest.getEmail());
+        statement.setString(4, guest.getPhone());
         statement.executeUpdate();
     }
 
