@@ -3,6 +3,7 @@ package com.ryunezm.apps.hotelalura.controller;
 import com.ryunezm.apps.hotelalura.factory.MySQL;
 import com.ryunezm.apps.hotelalura.model.Reserve;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class ReserveController {
@@ -17,7 +18,7 @@ public class ReserveController {
         db.addReserve(reserve);
     }
 
-    public List<Reserve> getAllReserves(){
+    public List<Reserve> getAllReserves() throws SQLException {
         return db.getAllReserves();
     }
 

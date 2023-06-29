@@ -1,4 +1,4 @@
-package com.ryunezm.apps.hotelalura.enums;
+package com.ryunezm.apps.hotelalura.model.enums;
 
 import lombok.Getter;
 

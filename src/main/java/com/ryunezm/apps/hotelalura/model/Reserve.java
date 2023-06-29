@@ -10,7 +10,7 @@ import java.sql.Date;
 @Setter
 @AllArgsConstructor
 public class Reserve {
-    private String reserveID;
+    private String id;
     private Date checkInDate;
     private Date checkOutDate;
     private Double valueReserve;

@@ -3,10 +3,8 @@ package com.ryunezm.apps.hotelalura.factory;
 import com.ryunezm.apps.hotelalura.model.Guest;
 import com.ryunezm.apps.hotelalura.model.Reserve;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MySQL {
@@ -42,7 +40,18 @@ public class MySQL {
     public void addReserve(Reserve reserve) {
     }
 
-    public List<Reserve> getAllReserves() {
+    public List<Reserve> getAllReserves() throws SQLException {
+
+        List<Reserve> reserves = new ArrayList<>();
+
+        String query = "SELECT * FROM reserves";
+        PreparedStatement statement = connection.prepareStatement(query);
+        ResultSet resultSet = statement.executeQuery();
+        while (resultSet.next()){
+
+        }
+
+
         return null;
     }
 
